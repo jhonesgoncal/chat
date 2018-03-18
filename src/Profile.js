@@ -4,10 +4,6 @@ import './profile.css';
 
 class Profile extends Component{
 
-	constructor(props){
-		super(props);
-	}
-
 	signOut(){
 	   firebase.auth().signOut().then(() => {
 	     console.log('deslogado')

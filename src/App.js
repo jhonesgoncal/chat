@@ -58,8 +58,8 @@ class App extends Component {
     const comments = {...this.state.comments}
     let i = Math.round(Math.random() * 10);
     const timestamp= (function(){
-                        return Date.now() + i;
                         i++; 
+                        return Date.now() + i;
                       })();
 
     comments[`comm-${timestamp}`] = comment;
@@ -82,9 +82,10 @@ class App extends Component {
     const provider = new firebase.auth.FacebookAuthProvider();
     
     firebase.auth().signInWithPopup(provider).then((result) => {
-        const token = result.credential.accessToken;
         const user = result.user;
-        this.state.user = user;
+        this.setState({
+          user: user
+        })
     })
   }
 
