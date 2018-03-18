@@ -10,12 +10,16 @@ describe('<Comment />', () => {
 
  it('renders without crashing', () => {
  	const comment = {
- 		comment: 'test'
- 	}
+		 comment: 'test',
+		 user:{
+			 name:'jhones',
+			 photo:'adv'
+		 },
+		 date: new Date()
+	 }
  	const wrapper = shallow(<Comment comment={comment} />);
  	expect(wrapper.length).toBe(1);
- 	expect(wrapper.is('.alert')).toBe(true);
- 	expect(wrapper.text()).toBe('test');
+ 	expect(wrapper.text()).toBe('jhonestest');
  })
 
  

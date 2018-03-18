@@ -11,10 +11,20 @@ describe('<Comments />', () => {
  it('renders without crashing', () => {
  	const comments = {
  		1: {
-	 		comment: 'test'
+			comment: 'test',
+			user:{
+				name:'jhones',
+				photo:'adv'
+			},
+			date: new Date()
 	 	},
 	 	2: {
-	 		comment: 'test'
+			comment: 'test',
+			user:{
+				name:'jhones',
+				photo:'adv'
+			},
+			date: new Date()
 	 	}
 	}
 
